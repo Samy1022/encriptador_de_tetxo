@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz De Interaccion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="assets/Logo.png" class="logo__alura">
+    <section class="interfaz">
+        <div class="interfaz__ingresar__texto">
+            <div class="contenedor-texto">
+                <textarea placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+
+            <div class="container__botones">
+                <div class="interfaz__mensaje__aviso">
+                    <img src="assets/bi_exclamation-circle-fill.png" class="imagen_exclamacion" />
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <button onclick="EncriptarTexto();" class="container__botones__boton1">Encriptar</button>
+                <button onclick="DesencriptarTexto();" class="container__botones__boton2">Desencriptar</button>
+            </div>
+        </div>
+        <div class="interfaz__generar__texto">
+            <div class="interfaz__generar__texto__rectangulo">
+                <img class="interfaz__generar__texto__rectangulo__imagen" src="assets/Muñeco.png" alt="muñeco">
+                <p class="interfaz__generar__texto__rectangulo__texto">Ningun mensaje fue Encontrado</p>
+                <p class="interfaz__generar__texto__rectangulo__texto">Ingrese el texto que desees Encriptaro
+                    Desencriptar</p>
+
+            </div>
+    </section>
+</body>
+
+</html>
