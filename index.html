@@ -14,7 +14,7 @@
     <section class="interfaz">
         <div class="interfaz__ingresar__texto">
             <div class="contenedor-texto">
-                <textarea placeholder="Ingrese el texto aqui"></textarea>
+                <textarea id="textoUsuario" placeholder="Ingrese el texto aqui"></textarea>
             </div>
 
             <div class="container__botones">
@@ -23,18 +23,22 @@
                     <p>Solo letras minusculas y sin acentos</p>
                 </div>
                 <button onclick="EncriptarTexto();" class="container__botones__boton1">Encriptar</button>
-                <button onclick="DesencriptarTexto();" class="container__botones__boton2">Desencriptar</button>
+                <button onclick="desencriptarTexto();" class="container__botones__boton2">Desencriptar</button>
             </div>
         </div>
         <div class="interfaz__generar__texto">
             <div class="interfaz__generar__texto__rectangulo">
-                <img class="interfaz__generar__texto__rectangulo__imagen" src="assets/Muñeco.png" alt="muñeco">
-                <p class="interfaz__generar__texto__rectangulo__texto">Ningun mensaje fue Encontrado</p>
-                <p class="interfaz__generar__texto__rectangulo__texto">Ingrese el texto que desees Encriptar o
+                <h1></h1>
+                <img id ='Contenedor' class="interfaz__generar__texto__rectangulo__imagen" src="assets/Muñeco.png" alt="muñeco">
+                <p id ='Contenedor' class="interfaz__generar__texto__rectangulo__texto">Ningun mensaje fue Encontrado</p>
+                <p id ='Contenedor' class="interfaz__generar__texto__rectangulo__texto">Ingrese el texto que desees Encriptar o
                     Desencriptar</p>
 
             </div>
     </section>
+
+    <script src="app_encriptador.js"></script>
+
 </body>
 
 </html>

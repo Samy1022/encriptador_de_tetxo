@@ -6,27 +6,36 @@ function asignartextoelemento(elemento,texto){
 }
 
 
-function EncriptarTexto(texto){
-    let textoEncriptado = texto
-        .replace(/e/g, "enter")
+function EncriptarTexto(){
+    let textarea = document.getElementById('textoUsuario');
+    let texto = textarea.value;
+    let textoEncriptado = texto.replace(/e/g, "enter")
         .replace(/i/g, "imes")
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
 
-    return textoEncriptado
+    // Asignar el texto encriptado al elemento <h1>
+    asignartextoelemento('h1', textoEncriptado);
+    limpiarCaja();
 }
 
-function desencriptarTexto(textoEncriptado) {
-    let textoDesencriptado = textoEncriptado
+function desencriptarTexto() {
+    let textEncriptado = document.getElementById('textoUsuario');
+    let texto = textEncriptado.value;
+    let textoDesencriptado = texto
         .replace(/enter/g, "e")
         .replace(/imes/g, "i")
         .replace(/ai/g, "a")
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-    return textoDesencriptado;
+    asignartextoelemento('h1', textoDesencriptado)
+    limpiarCaja();
 }
 
+function limpiarCaja() {
+    document.getElementById('Contenedor').value = '';
+}
 
 
