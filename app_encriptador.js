@@ -1,12 +1,12 @@
 
-function asignartextoelemento(elemento,texto){
+function asignartextoelemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
     return;
 }
 
 
-function EncriptarTexto(){
+function EncriptarTexto() {
     let textarea = document.getElementById('textoUsuario');
     let texto = textarea.value;
     let textoEncriptado = texto.replace(/e/g, "enter")
@@ -37,29 +37,28 @@ function desencriptarTexto() {
 }
 
 function eliminarContenidoCaja() {
-    
+
 
     let contenedor = document.getElementById("caja");
 
-        // Seleccionar todos los hijos del contenedor, excepto los <h1>
-        let hijos = contenedor.children;
+    // Seleccionar todos los hijos del contenedor, excepto los <h1>
+    let hijos = contenedor.children;
 
-        // Convertir a un array para poder recorrerlo y eliminar elementos
-        for (let i = hijos.length - 1; i >= 0; i--) {
-            if (hijos[i].tagName !== "H1") {
-                contenedor.removeChild(hijos[i]);
-            }
+    // Convertir a un array para poder recorrerlo y eliminar elementos
+    for (let i = hijos.length - 1; i >= 0; i--) {
+        if (hijos[i].tagName !== "H1") {
+            contenedor.removeChild(hijos[i]);
         }
+    }
+
 }
 
 function copiarTexto() {
-    let contenedor = document.getElementById("boton__copiar");
+    let contenedor = document.getElementById("caja");
     let textoParaCopiar = contenedor.querySelector("h1").textContent;
 
     // Copiar el texto al portapapeles
-    navigator.clipboard.writeText(textoParaCopiar).then(() => {
-        alert("Texto copiado al portapapeles");
-    });
+    navigator.clipboard.writeText(textoParaCopiar);
 }
 
 
