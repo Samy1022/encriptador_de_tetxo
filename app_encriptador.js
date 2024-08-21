@@ -17,7 +17,8 @@ function EncriptarTexto(){
 
     // Asignar el texto encriptado al elemento <h1>
     asignartextoelemento('h1', textoEncriptado);
-    limpiarCaja();
+    eliminarContenidoCaja();
+    document.getElementById('boton__copiar').removeAttribute('disabled');
 }
 
 function desencriptarTexto() {
@@ -31,11 +32,34 @@ function desencriptarTexto() {
         .replace(/ufat/g, "u");
 
     asignartextoelemento('h1', textoDesencriptado)
-    limpiarCaja();
+    eliminarContenidoCaja();
+    document.getElementById('boton__copiar').removeAttribute('disabled');
 }
 
-function limpiarCaja() {
-    document.getElementById('Contenedor').value = '';
+function eliminarContenidoCaja() {
+    
+
+    let contenedor = document.getElementById("caja");
+
+        // Seleccionar todos los hijos del contenedor, excepto los <h1>
+        let hijos = contenedor.children;
+
+        // Convertir a un array para poder recorrerlo y eliminar elementos
+        for (let i = hijos.length - 1; i >= 0; i--) {
+            if (hijos[i].tagName !== "H1") {
+                contenedor.removeChild(hijos[i]);
+            }
+        }
+}
+
+function copiarTexto() {
+    let contenedor = document.getElementById("boton__copiar");
+    let textoParaCopiar = contenedor.querySelector("h1").textContent;
+
+    // Copiar el texto al portapapeles
+    navigator.clipboard.writeText(textoParaCopiar).then(() => {
+        alert("Texto copiado al portapapeles");
+    });
 }
 
 

@@ -27,14 +27,16 @@
             </div>
         </div>
         <div class="interfaz__generar__texto">
-            <div class="interfaz__generar__texto__rectangulo">
-                <h1></h1>
+            <div id = "caja" class="interfaz__generar__texto__rectangulo">
+                <h1 class ="interfaz__generar__texto__rectangulo__texto__generado"></h1>
                 <img id ='Contenedor' class="interfaz__generar__texto__rectangulo__imagen" src="assets/Muñeco.png" alt="muñeco">
                 <p id ='Contenedor' class="interfaz__generar__texto__rectangulo__texto">Ningun mensaje fue Encontrado</p>
                 <p id ='Contenedor' class="interfaz__generar__texto__rectangulo__texto">Ingrese el texto que desees Encriptar o
                     Desencriptar</p>
+                <button class="interfaz__generar__texto__rectangulo__copiar" id="boton__copiar" onclick="copiarTexto()" disabled>Copiar</button>
 
             </div>
+        </div>
     </section>
 
     <script src="app_encriptador.js"></script>
